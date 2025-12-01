@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boot Sequence</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="video-container">
+        <video id="boot-video" playsinline>
+            <source src="data/boot.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="start-screen">
+        <button id="start-btn">START SYSTEM</button>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <div class="gyro-display">
+            <div class="gyro-circle">
+                <div class="gyro-line"></div>
+                <div class="gyro-line horizontal"></div>
+            </div>
+            <span>GYRO: STABLE</span>
+        </div>
+
+        <div class="top-right-panel">
+            <div class="sensor-data">
+                <div class="sensor-row"><span>TEMP:</span> <span>45°C</span></div>
+                <div class="sensor-row"><span>HUM:</span> <span>32%</span></div>
+                <div class="sensor-row"><span>BAT:</span> <span>98%</span></div>
+            </div>
+            <button id="power-btn">POWER OFF</button>
+        </div>
+
+        <div class="center-plus">
+            <div class="plus-h"></div>
+            <div class="plus-v"></div>
+        </div>
+
+        <div class="live-feed">
+            <div class="feed-content">
+                <span>NO SIGNAL</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmation-modal" class="hidden">
+        <div class="modal-content">
+            <p>CONFIRM POWER OFF?</p>
+            <div class="modal-actions">
+                <!DOCTYPE html>
+                <html lang="en">
+
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Boot Sequence</title>
+                    <link rel="stylesheet" href="main.css">
+                    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+                </head>
+
+                <body>
+
+                    <div id="video-container">
+                        <video id="boot-video" playsinline>
+                            <source src="data/boot.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div id="start-screen">
+                        <button id="start-btn">START SYSTEM</button>
+                    </div>
+
+                    <div id="dashboard" class="hidden">
+                        <div class="gyro-display">
+                            <div class="gyro-circle">
+                                <div class="gyro-line"></div>
+                                <div class="gyro-line horizontal"></div>
+                            </div>
+                            <span>GYRO: STABLE</span>
+                        </div>
+
+                        <div class="top-right-panel">
+                            <div class="sensor-data">
+                                <div class="sensor-row"><span>TEMP:</span> <span>45°C</span></div>
+                                <div class="sensor-row"><span>HUM:</span> <span>32%</span></div>
+                                <div class="sensor-row"><span>BAT:</span> <span>98%</span></div>
+                            </div>
+                            <button id="power-btn">POWER OFF</button>
+                        </div>
+
+                        <div class="center-plus">
+                            <div class="plus-h"></div>
+                            <div class="plus-v"></div>
+                        </div>
+
+                        <div class="live-feed">
+                            <div class="feed-content">
+                                <span>NO SIGNAL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="confirmation-modal" class="hidden">
+                        <div class="modal-content">
+                            <p>CONFIRM POWER OFF?</p>
+                            <div class="modal-actions">
+                                <button id="confirm-yes">OKAY</button>
+                                <button id="confirm-no">CANCEL</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="rotate-warning">
+                        <div class="warning-content">
+                            <div class="warning-icon">⟳</div>
+                            <p>SYSTEM REQUIRES LANDSCAPE MODE</p>
+                            <p class="small">PLEASE ROTATE DEVICE</p>
+                        </div>
+                    </div>
+
+                    <script src="script.js"></script>
+                </body>
+
+                </html>
