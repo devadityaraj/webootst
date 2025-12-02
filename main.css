@@ -250,71 +250,72 @@ body {
     cursor: pointer;
     font-family: inherit;
     border: 1px solid #555;
+}
 
-    /* Rotation Warning Overlay */
+/* Rotation Warning Overlay */
+#rotate-warning {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.warning-content {
+    color: var(--primary-color);
+}
+
+.warning-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: rotate 2s infinite linear;
+}
+
+.warning-content p {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.warning-content .small {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile Optimization & Landscape Enforcement */
+@media screen and (max-width: 900px) and (orientation: portrait) {
     #rotate-warning {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        z-index: 9999;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        display: flex;
     }
 
-    .warning-content {
-        color: var(--primary-color);
+    /* Hide everything else when warning is shown to prevent scrolling/interaction */
+    #video-container,
+    #start-screen,
+    #dashboard,
+    #confirmation-modal {
+        display: none !important;
     }
+}
 
-    .warning-icon {
-        font-size: 50px;
-        margin-bottom: 20px;
-        animation: rotate 2s infinite linear;
+/* Ensure full height on mobile browsers */
+@supports (height: 100dvh) {
+    body {
+        height: 100dvh;
     }
-
-    .warning-content p {
-        font-size: 20px;
-        letter-spacing: 2px;
-        margin-bottom: 10px;
-    }
-
-    .warning-content .small {
-        font-size: 14px;
-        opacity: 0.7;
-    }
-
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    /* Mobile Optimization & Landscape Enforcement */
-    @media screen and (max-width: 900px) and (orientation: portrait) {
-        #rotate-warning {
-            display: flex;
-        }
-
-        /* Hide everything else when warning is shown to prevent scrolling/interaction */
-        #video-container,
-        #start-screen,
-        #dashboard,
-        #confirmation-modal {
-            display: none !important;
-        }
-    }
-
-    /* Ensure full height on mobile browsers */
-    @supports (height: 100dvh) {
-        body {
-            height: 100dvh;
-        }
-    }
+}
